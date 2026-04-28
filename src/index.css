@@ -58,6 +58,17 @@ body {
   background: #00000059;
   z-index: -1;
 }
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  background-image: linear-gradient(to top, black, transparent);
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -110,6 +121,7 @@ body {
   display: flex;
   gap: 35px;
   padding-left: 45px;
+  position: relative;
 }
 
 .hero-btn > button {
@@ -132,4 +144,75 @@ body {
   color: white;
   backdrop-filter: blur(10px);
   transition: 0.3s ease;
+}
+
+/* movie cards section style */
+.movies-card {
+  width: 236px;
+  position: relative;
+  overflow: hidden;
+}
+
+.movies-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+}
+
+.movies-card img:hover {
+  border: 2px solid #fff;
+}
+
+.movie-list h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.top-movies-divider {
+  border: none;
+  height: 2.5px;
+  width: 100%;
+  background-color: #702d1d;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.movie-list span {
+  color: #f53100;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.movie-list {
+  padding: 100px;
+}
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+
+  color: white;
+
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.movies-card:hover .overlay {
+  transform: translateY(0);
 }
