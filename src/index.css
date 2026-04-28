@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600&family=Abril+Fatface&display=swap");
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+
+.font-abril {
+  font-family: "Abril Fatface", cursive;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +17,7 @@
 }
 body {
   background-color: #080808;
+  /* font-family: "Courier New", Courier, monospace; */
 }
 
 /* navbar style */
@@ -14,13 +27,109 @@ body {
   padding: 15px;
 }
 .navbar h4 {
-  color: #c9963a;
+  color: #ff653f;
+  font-size: 25px;
 }
 .navbar button {
-  padding: 6px;
+  padding: 6px 11px;
   color: black;
-  background-color: #c9963a;
+  background-color: #ff653f;
   border: none;
   font-weight: 500;
   cursor: pointer;
+  border-radius: 2px;
+}
+/* hero section style */
+
+.hero-container {
+  position: relative;
+  background-size: cover;
+  height: calc(100vh - 57.33px);
+  display: flex;
+  align-items: center;
+}
+.hero-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000059;
+  z-index: -1;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+.hero-content h1 {
+  padding-left: 45px;
+  text-transform: capitalize;
+  font-weight: 900;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 100px;
+  line-height: 0.9;
+}
+.top-rated {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 45px;
+}
+.top-rated span {
+  text-transform: uppercase;
+  color: #ff653f;
+  font-weight: 600;
+}
+.divider {
+  border: none;
+  height: 2.5px;
+  width: 30px;
+  background-color: #ff653f;
+}
+.movie-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 45px;
+}
+.movie-info > span {
+  color: #f53100;
+  font-weight: 500;
+}
+
+.hero-content p {
+  color: #ffdbd1;
+  width: 100px;
+  width: 45em;
+  font-weight: 500;
+  padding-left: 45px;
+}
+.hero-btn {
+  display: flex;
+  gap: 35px;
+  padding-left: 45px;
+}
+
+.hero-btn > button {
+  padding: 10px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.details-btn {
+  border: none;
+
+  color: #080808;
+  background-color: #ff653f;
+}
+
+.trailer-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
 }
