@@ -185,7 +185,7 @@ body {
   font-size: 13px;
 }
 .movie-list {
-  padding: 100px;
+  padding: 100px 100px 13px;
 }
 .movies {
   display: flex;
@@ -215,4 +215,18 @@ body {
 
 .movies-card:hover .overlay {
   transform: translateY(0);
+}
+.title-two {
+  padding: 60px 100px 70px;
+}
+.title-two h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.title-two span {
+  color: #f53100;
+  margin-bottom: 10px;
+  font-size: 13px;
 }

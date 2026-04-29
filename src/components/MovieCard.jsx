@@ -1,8 +1,8 @@
 import "../index.css";
 
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie, width }) {
   return (
-    <div className="movies-card">
+    <div className="movies-card" style={{ width }}>
       <img src={movie.movieCoverUrl} alt="movie cover" />
 
       <div className="overlay">
