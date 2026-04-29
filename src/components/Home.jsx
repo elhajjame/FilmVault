@@ -4,6 +4,7 @@ import MovieCard from "./MovieCard";
 import FilterBar from "./FilterBar";
 import Hero from "./Hero";
 import AllMovies from "./AllMovies";
+import AddMovieModal from "./AddMovieModal";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <MovieList />
       <AllMovies />
+      <AddMovieModal />
     </div>
   );
 }
