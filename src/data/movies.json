@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Inception",
+    "description": "A skilled thief who steals secrets through dream-sharing technology is given a chance to erase his past by planting an idea into a target's subconscious.",
+    "releaseYear": 2010,
+    "genre": "Sci-Fi, Thriller",
+    "director": "Christopher Nolan",
+    "mainActors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+    "movieCoverUrl": "https://a.ltrbxd.com/resized/sm/upload/sv/95/s9/4j/inception-0-2000-0-3000-crop.jpg?v=30d7224316",
+    "trailerUrl": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+    "rating": 8.8
+  },
+  {
+    "title": "The Dark Knight",
+    "description": "Batman faces the Joker, a criminal mastermind who seeks to plunge Gotham City into chaos.",
+    "releaseYear": 2008,
+    "genre": "Action, Crime, Drama",
+    "director": "Christopher Nolan",
+    "mainActors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "movieCoverUrl": "https://a.ltrbxd.com/resized/sm/upload/78/y5/zg/ej/oefdD26aey8GPdx7Rm45PNncJdU-0-2000-0-3000-crop.jpg?v=2d0ce4be25",
+    "trailerUrl": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+    "rating": 9.0
+  },
+  {
+    "title": "Interstellar",
+    "description": "A group of explorers travel through a wormhole in space to ensure humanity's survival.",
+    "releaseYear": 2014,
+    "genre": "Sci-Fi, Adventure, Drama",
+    "director": "Christopher Nolan",
+    "mainActors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "movieCoverUrl": "https://a.ltrbxd.com/resized/film-poster/1/1/7/6/2/1/117621-interstellar-0-2000-0-3000-crop.jpg?v=7ad89e6666",
+    "trailerUrl": "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+    "rating": 8.6
+  },
+  {
+    "title": "Fight Club",
+    "description": "An insomniac office worker and a soap maker form an underground fight club that evolves into something much bigger.",
+    "releaseYear": 1999,
+    "genre": "Drama",
+    "director": "David Fincher",
+    "mainActors": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+    "movieCoverUrl": "https://a.ltrbxd.com/resized/film-poster/5/1/5/6/8/51568-fight-club-0-2000-0-3000-crop.jpg?v=768b32dfa4",
+    "trailerUrl": "https://www.youtube.com/watch?v=SUXWAEX2jlg",
+    "rating": 8.8
+  }
+]

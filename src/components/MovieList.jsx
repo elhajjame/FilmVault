@@ -1,4 +1,5 @@
 import "../index.css";
+import moviesData from "../data/movies.json";
 import MovieCard from "./MovieCard";
 import SectionTitle from "./SectionTitle";
 
@@ -7,7 +8,9 @@ export default function MovieList() {
     <div className="movie-list">
       <SectionTitle title="Top Rated Films" category="Hall of Fame" />
       <div className="movies">
-        <MovieCard />
+        {moviesData.map((movie) => (
+          <MovieCard movie={movie} />
+        ))}
       </div>
     </div>
   );
