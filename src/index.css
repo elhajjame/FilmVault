@@ -230,3 +230,35 @@ body {
   margin-bottom: 10px;
   font-size: 13px;
 }
+/* filter bar style */
+.filter-title-section {
+  display: flex;
+  align-items: center;
+}
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 30px;
+}
+
+select {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #702d1d;
+}
+
+select:focus {
+  border-color: #f53100;
+  box-shadow: 0 0 5px #f53100;
+}
