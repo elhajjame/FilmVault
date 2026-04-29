@@ -1,12 +1,11 @@
 import "../index.css";
 import MovieCard from "./MovieCard";
+import SectionTitle from "./SectionTitle";
 
 export default function MovieList() {
   return (
     <div className="movie-list">
-      <span className="font-abril">Hall of Fame</span>
-      <h2 className="font-cinzel">Top Rated Films</h2>
-      <hr className="top-movies-divider" />
+      <SectionTitle title="Top Rated Films" category="Hall of Fame" />
       <div className="movies">
         <MovieCard />
       </div>
