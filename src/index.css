@@ -265,8 +265,9 @@ select:focus {
 /* Add Movie Modal style*/
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
@@ -385,4 +386,134 @@ select:focus {
 
 .hidden {
   display: none;
+}
+
+.container-de {
+  position: relative;
+  overflow-y: auto;
+  border-left: 3px solid #f53100;
+
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  width: 900px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0c1117, #0a0d12);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.container-de {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+}
+.container-de img {
+  width: 170px;
+  height: auto;
+  border-radius: 3px;
+}
+.title {
+  color: #fff;
+  letter-spacing: 2px;
+}
+.category {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f53100;
+}
+.details-container h3 {
+  font-size: 33px;
+}
+.details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.details-container .stars {
+  color: #f5c15d;
+  /* font-size: 18px; */
+}
+
+.details-container .cast {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.details-container .director {
+  color: #aaa;
+  font-size: 14px;
+}
+.details-container .desc {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.cast > span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #11161c;
+  border: 1px solid #222;
+  font-size: 12px;
+}
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.trailer {
+  background-color: #ff653f;
+  color: #080808;
+}
+.edit {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+}
+.delete {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.modal-overlay-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal-overlay-2::before {
+  content: "";
+  position: fixed;
+  left: -100%;
+  top: -100%;
+  width: 1000vw;
+  height: 1000vh;
+  background-color: #000000e0;
+}
+.close-details {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
 }
