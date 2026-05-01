@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600&family=Abril+Fatface&display=swap");
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+
+.font-abril {
+  font-family: "Abril Fatface", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #080808;
+  /* font-family: "Courier New", Courier, monospace; */
+}
+
+/* navbar style */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.navbar h4 {
+  color: #ff653f;
+  font-size: 25px;
+}
+.navbar button {
+  padding: 6px 11px;
+  color: black;
+  background-color: #ff653f;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/* hero section style */
+
+.hero-container {
+  position: relative;
+  background-size: cover;
+  height: calc(100vh - 57.33px);
+  display: flex;
+  align-items: center;
+}
+.hero-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000059;
+  z-index: -1;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  background-image: linear-gradient(to top, black, transparent);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+.hero-content h1 {
+  padding-left: 45px;
+  text-transform: capitalize;
+  font-weight: 900;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 100px;
+  line-height: 0.9;
+}
+.top-rated {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 45px;
+}
+.top-rated span {
+  text-transform: uppercase;
+  color: #ff653f;
+  font-weight: 600;
+}
+.divider {
+  border: none;
+  height: 2.5px;
+  width: 30px;
+  background-color: #ff653f;
+}
+.movie-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 45px;
+}
+.movie-info > span {
+  color: #f53100;
+  font-weight: 500;
+}
+
+.hero-content p {
+  color: #ffdbd1;
+  width: 100px;
+  width: 45em;
+  font-weight: 500;
+  padding-left: 45px;
+}
+.hero-btn {
+  display: flex;
+  gap: 35px;
+  padding-left: 45px;
+  position: relative;
+}
+
+.hero-btn > button {
+  padding: 10px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.details-btn {
+  border: none;
+  color: #080808;
+  background-color: #ff653f;
+}
+
+.trailer-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+/* movie cards section style */
+.movies-card {
+  width: 236px;
+  position: relative;
+  overflow: hidden;
+}
+
+.movies-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+}
+
+.movies-card img:hover {
+  border: 2px solid #fff;
+}
+
+.movie-list h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.top-movies-divider {
+  border: none;
+  height: 2.5px;
+  width: 100%;
+  background-color: #702d1d;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.movie-list span {
+  color: #f53100;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.movie-list {
+  padding: 100px 100px 13px;
+}
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+
+  color: white;
+
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.movies-card:hover .overlay {
+  transform: translateY(0);
+}
+.title-two {
+  padding: 60px 100px 70px;
+}
+.title-two h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.title-two span {
+  color: #f53100;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+/* filter bar style */
+.filter-title-section {
+  display: flex;
+  align-items: center;
+}
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 30px;
+}
+
+select {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #702d1d;
+}
+
+select:focus {
+  border-color: #f53100;
+  box-shadow: 0 0 5px #f53100;
+}
+
+/* Add Movie Modal style*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  padding: 25px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-left: 3px solid #f53100;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.close-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  outline: none;
+}
+
+.form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row div {
+  flex: 1;
+}
+
+.stars {
+  margin-top: 10px;
+}
+
+.stars span {
+  color: #d4a017;
+  font-size: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #ff653f;
+  border: none;
+  padding: 10px 20px;
+  color: #080808;
+  cursor: pointer;
+}
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #702d1d;
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #702d1d;
+}
+
+.hidden {
+  display: none;
+}

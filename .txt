@@ -1,0 +1,80 @@
+1. Bebas Neue → MAIN CINEMATIC FONT (MOST IMPORTANT)
+👉 Use it for anything that must grab attention
+Use for:
+=== Movie titles (cards)
+=== Hero section main title
+=== Big headings (H1, H2)
+
+
+Featured content labels
+
+
+Example:
+<h1 className="font-bebas">Inception</h1>
+👉 Why:
+It looks like Netflix / movie posters / cinema branding
+
+🏰 2. Cinzel → EPIC / CATEGORY / INFORMATION TEXT
+👉 Use it for structured or “serious cinematic” text
+Use for:
+== “Top Rated”, “Trending”, “New Releases”
+== Category titles
+== Tags like Action / Drama / Sci-Fi
+== Movie details headers
+
+
+Example:
+<span className="font-cinzel">Top Rated</span>
+👉 Why:
+Feels epic, elegant, fantasy, serious cinema
+
+🎞️ 3. Abril Fatface → STYLISH / FEATURED QUOTES / SPECIAL TEXT
+👉 Use it VERY sparingly (this is important)
+Use for:
+== Featured movie tagline
+== Hero subtitle (rare cases)
+== Quotes or emotional text
+== Special highlighted sections
+
+Example:
+<p className="font-abril">  “Experience cinema like never before”</p>
+👉 Why:
+Feels old Hollywood, dramatic, artistic
+
+🎯 SIMPLE RULE (VERY IMPORTANT)
+🧠 Think like this:
+Type of textFontMain movie titlesBebas NeueUI labels / categoriesCinzelSpecial emotional textAbril Fatface
+
+🚀 REAL EXAMPLE (how your page should look)
+<h1 className="font-bebas">MovieVerse</h1><span className="font-cinzel">Trending Movies</span><h2 className="font-bebas">Interstellar</h2><p className="font-abril">  “A journey beyond time and space”</p>
+
+⚠️ IMPORTANT (don’t mess this up)
+
+
+❌ Don’t use all 3 fonts everywhere
+
+
+❌ Don’t mix Cinzel for big titles
+
+
+❌ Don’t use Abril for normal text
+
+
+
+💡 If you want pro-level UI (like Netflix)
+I can help you upgrade this into:
+
+
+consistent typography system
+
+
+spacing rules
+
+
+card design system
+
+
+hover effects
+
+
+Just tell me 👍
