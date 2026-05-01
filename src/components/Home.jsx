@@ -5,6 +5,7 @@ import FilterBar from "./FilterBar";
 import Hero from "./Hero";
 import AllMovies from "./AllMovies";
 import AddMovieModal from "./AddMovieModal";
+import ViewDetailsModal from "./ViewDetailsModal";
 
 export default function Home() {
   return (
