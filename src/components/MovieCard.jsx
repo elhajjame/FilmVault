@@ -3,7 +3,7 @@ import "../index.css";
 export default function MovieCard({ movie, width }) {
   return (
     <div className="movies-card" style={{ width }}>
-      <img src={movie.movieCoverUrl} alt="movie cover" />
+      <img src={movie.coverImg} alt="movie cover" />
 
       <div className="overlay">
         <span>{movie.genre}</span>
