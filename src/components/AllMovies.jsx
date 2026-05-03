@@ -8,7 +8,7 @@ export default function AllMovies({ movies }) {
   return (
     <div className="title-two">
       <SectionTitle title="All Films" category="The Collection" />
-      <FilterBar />
+      <FilterBar movies={movies} />
 
       <div className="movies">
         {movies.map((movie) => (
