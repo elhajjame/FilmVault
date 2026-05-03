@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import AllMovies from "./AllMovies";
 import AddMovieModal from "./AddMovieModal";
 import { useEffect, useState } from "react";
+import ViewDetailsModal from "./ViewDetailsModal";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
