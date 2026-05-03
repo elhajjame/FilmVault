@@ -1,17 +1,17 @@
 import "../index.css";
-import moviesData from "../data/movies.json";
+// import moviesData from "../data/movies.json";
 import MovieCard from "./MovieCard";
 import SectionTitle from "./SectionTitle";
 import FilterBar from "./FilterBar";
 
-export default function AllMovies() {
+export default function AllMovies({ movies }) {
   return (
     <div className="title-two">
       <SectionTitle title="All Films" category="The Collection" />
       <FilterBar />
 
       <div className="movies">
-        {moviesData.map((movie) => (
+        {movies.map((movie) => (
           <MovieCard movie={movie} width={"165px"} />
         ))}
       </div>

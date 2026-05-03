@@ -5,8 +5,13 @@ import ViewDetailsModal from "./ViewDetailsModal";
 export default function MovieCard({ movie, width }) {
   const [isOpen, isSetOpen] = useState(false);
   return (
-    <div className="movies-card" style={{ width }}>
-      <img src={movie.coverImg} alt="movie cover" />
+    <>
+      <div
+        onClick={() => isSetOpen(true)}
+        className="movies-card"
+        style={{ width }}
+      >
+        <img src={movie.coverImg} alt="movie cover" />
 
         <div className="overlay">
           <span>{movie.genre}</span>

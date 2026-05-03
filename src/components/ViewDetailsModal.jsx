@@ -1,5 +1,7 @@
 import "../index.css";
 export default function ViewDetailsModal({ movie, isSetOpen }) {
+  console.log(movie);
+
   return (
     <div className="modal-overlay-2">
       <div className="container-de">
@@ -9,7 +11,7 @@ export default function ViewDetailsModal({ movie, isSetOpen }) {
             ✕
           </button>
         </div>
-        <img src={movie.movieCoverUrl} />
+        <img src={movie.coverImg} />
         <section className="details-container">
           <div className="category">
             {movie.releaseYear} • {movie.genre}
@@ -20,7 +22,7 @@ export default function ViewDetailsModal({ movie, isSetOpen }) {
 
           <p className="desc">{movie.description}</p>
           <div className="cast">
-            {movie.mainActors.map((actor) => (
+            {movie.mainActors.split(", ").map((actor) => (
               <span>{actor}</span>
             ))}
           </div>
