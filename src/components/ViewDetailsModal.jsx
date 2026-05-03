@@ -1,7 +1,5 @@
 import "../index.css";
-export default function ViewDetailsModal({ movie, isSetOpen }) {
-  console.log(movie);
-
+export default function ViewDetailsModal({ movie, isSetOpen, deleteHandler }) {
   return (
     <div className="modal-overlay-2">
       <div className="container-de">
@@ -29,7 +27,12 @@ export default function ViewDetailsModal({ movie, isSetOpen }) {
           <div className="buttons">
             <button className="btn trailer">Watch Trailer</button>
             <button className="btn edit">Edit Movie</button>
-            <button className="btn delete">Delete</button>
+            <button
+              onClick={() => deleteHandler(movie.id)}
+              className="btn delete"
+            >
+              Delete
+            </button>
           </div>
         </section>
       </div>

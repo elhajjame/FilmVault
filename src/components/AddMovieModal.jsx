@@ -10,12 +10,12 @@ export default function AddMovieModal({ setMovies }) {
     title: "",
     description: "",
     releaseYear: "",
-    genre: "",
+    genre: [],
     director: "",
     mainActors: "",
     coverImg: "",
     trailer: "",
-    rating: "",
+    rating: 0,
   });
 
   const handleChange = (e) => {
@@ -126,11 +126,19 @@ export default function AddMovieModal({ setMovies }) {
 
           <label>Rating</label>
           <div className="stars">
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
+            {[1, 2, 3, 4, 5].map((star) => (
+              <span
+                key={star}
+                onClick={() => setValues({ ...values, rating: star })}
+                style={{
+                  cursor: "pointer",
+                  color: star <= values.rating ? "#f5c518" : "#555",
+                  fontSize: "20px",
+                }}
+              >
+                ★
+              </span>
+            ))}
           </div>
 
           <div className="actions">

@@ -12,14 +12,16 @@ export default function Home() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     const moviesData = JSON.parse(localStorage.getItem("movies")) || [];
-    setMovies(moviesData);
-  }, []);
+    console.log(moviesData);
 
+    setMovies(moviesData);
+  }, [setMovies]);
+  console.log(movies);
   return (
     <div className="">
       <Navbar />
-      <Hero />
-      <MovieList movies={movies} />
+      <Hero movies={movies} />
+      <MovieList movies={movies} setMovies={setMovies} />
       <AllMovies movies={movies} />
       <AddMovieModal setMovies={setMovies} movies={movies} />
     </div>

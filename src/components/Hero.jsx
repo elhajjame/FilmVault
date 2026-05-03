@@ -1,17 +1,22 @@
 import "../index.css";
 import { useState } from "react";
 import ViewDetailsModal from "./ViewDetailsModal";
-import movies from "../data/movies.json";
 
-export default function Hero() {
+export default function Hero({ movies }) {
   const [isOpen, isSetOpen] = useState(false);
+  if (!movies.length) return null;
+  const topRated = [...movies]
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 1)[0];
+  console.log(movies);
+  console.log(topRated);
+
   return (
     <>
       <div
-        className="hero-container"
+        className="hero-container "
         style={{
-          backgroundImage:
-            "url(https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/ede72271-f953-4416-a3a4-b501e704befc/bea3bb67-0372-4672-bcdb-6c8557004b48?host=wbd-images.prod-vod.h264.io&partner=beamcom) ",
+          backgroundImage: `url(${topRated.coverImg})`,
         }}
       >
         <div className="hero-content">
@@ -19,17 +24,13 @@ export default function Hero() {
             <hr className="divider" />
             <span>Top Rated in Your Vault</span>
           </div>
-          <h1 className="font-bebas">Whiplash</h1>
+          <h1 className="font-bebas">{topRated.title}</h1>
           <div className="movie-info">
-            <span className="font-cinzel">Drama/Indie film</span>
-            <span>2014</span>
-            <span>Christopher Nolan</span>
+            <span className="font-cinzel">{topRated.genre}</span>
+            <span>{topRated.releaseYear}</span>
+            <span>{topRated.director}</span>
           </div>
-          <p>
-            A promising young drummer enrolls at a cut-throat music conservatory
-            where his dreams of greatness are mentored by an instructor who will
-            stop at nothing to realize a student's potential.
-          </p>
+          <p>{topRated.description}</p>
           <div className="hero-btn">
             <button
               className="details-btn"
@@ -43,7 +44,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      {isOpen && <ViewDetailsModal movie={movies[0]} isSetOpen={isSetOpen} />}
+      {isOpen && <ViewDetailsModal movie={topRated} isSetOpen={isSetOpen} />}
     </>
   );
 }

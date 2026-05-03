@@ -3,13 +3,22 @@ import "../index.css";
 import MovieCard from "./MovieCard";
 import SectionTitle from "./SectionTitle";
 
-export default function MovieList({ movies }) {
+export default function MovieList({ movies, setMovies }) {
+  const topRated = [...movies].sort((a, b) => b.rating - a.rating).slice(0, 4);
+  console.log(movies);
+  console.log(topRated);
+
   return (
     <div className="movie-list">
       <SectionTitle title="Top Rated Films" category="Hall of Fame" />
       <div className="movies">
-        {movies.map((movie) => (
-          <MovieCard movie={movie} width={"236px"} />
+        {topRated.map((movie) => (
+          <MovieCard
+            movie={movie}
+            movies={movies}
+            width={"236px"}
+            setMovies={setMovies}
+          />
         ))}
       </div>
     </div>

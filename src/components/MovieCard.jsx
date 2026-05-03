@@ -2,8 +2,15 @@ import { useState } from "react";
 import "../index.css";
 import ViewDetailsModal from "./ViewDetailsModal";
 
-export default function MovieCard({ movie, width }) {
+export default function MovieCard({ movies, movie, width, setMovies }) {
+  console.log(movie);
+
   const [isOpen, isSetOpen] = useState(false);
+  const deleteHandler = (id) => {
+    const updatedMovies = movies.filter((film) => film.id !== id);
+    setMovies(updatedMovies);
+    localStorage.setItem("movies", JSON.stringify(updatedMovies));
+  };
   return (
     <>
       <div
@@ -19,7 +26,13 @@ export default function MovieCard({ movie, width }) {
           <span>⭐ {movie.rating}</span>
         </div>
       </div>
-      {isOpen && <ViewDetailsModal movie={movie} isSetOpen={isSetOpen} />}
+      {isOpen && (
+        <ViewDetailsModal
+          movie={movie}
+          isSetOpen={isSetOpen}
+          deleteHandler={deleteHandler}
+        />
+      )}
     </>
   );
 }
